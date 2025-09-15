@@ -1,4 +1,4 @@
-module urlFetcher
+module github.com/mynamesishuman/UrlFetcher
 
 go 1.24
 
