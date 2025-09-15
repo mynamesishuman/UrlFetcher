@@ -1,0 +1,25 @@
+syntax = "proto3";
+
+package task_v1;
+
+import "google/protobuf/empty.proto";
+
+option go_package = "github.com/mynamesishuman/UrlFetcher/pkg/task_v1;task_v1;";
+
+service TaskV1 {
+  rpc Create(CreateRequest) returns (CreateResponse);
+  rpc Delete(DeleteRequest) returns (google.protobuf.Empty);
+}
+
+message CreateRequest {
+  string url = 1;
+}
+
+message DeleteRequest
+{
+  int64 id = 1;
+}
+
+message CreateResponse {
+  int64 id = 1;
+}
